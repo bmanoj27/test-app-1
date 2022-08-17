@@ -1,5 +1,2 @@
-FROM registry.access.redhat.com/ubi8/ubi:8.3
-
-RUN yum -y install httpd
-
-EXPOSE 80
+FROM httpd:2.4
+COPY ./public-html/ /usr/local/apache2/htdocs/
